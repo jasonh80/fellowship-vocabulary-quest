@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fellowship 5th Grade Vocab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500;600;700&family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   PALETTE + BASE
+   ============================================================ */
+/* Fellowship Christian School web palette: navy #012b49, steel blue #5f8fb4,
+   gold #c1a01f, plum #893b67, green #348338, and orange #e87722. */
+:root{
+  --bg:#071b35;
+  --bg2:#103b6c;
+  --card:#ffffff;
+  --ink:#092849;
+  --ink-soft:#5a6b7d;
+  --brand:#4b7aa0;
+  --brand-dk:#012b49;
+  --steel:#6ea8d2;
+  --coral:#e87722;
+  --good:#348338;
+  --good-dk:#246c28;
+  --bad:#e87722;
+  --sun:#c1a01f;
+  --aqua:#5f8fb4;
+  --violet:#893b67;
+  --ring:rgba(75,122,160,.55);
+  --radius:18px;
+  --shadow:0 10px 30px rgba(0,0,0,.28);
+}
+*{box-sizing:border-box;}
+html,body{height:100%;}
+body{
+  margin:0;
+  font-family:"Open Sans",Arial,sans-serif;
+  color:#fff;
+  background:
+    radial-gradient(900px 630px at -8% -5%, #1b5d9d 0%, transparent 62%),
+    radial-gradient(720px 530px at 108% 8%, #6d3c83 0%, transparent 64%),
+    radial-gradient(700px 560px at 50% 115%, #0b6b78 0%, transparent 65%),
+    linear-gradient(160deg,var(--bg2) 0%, var(--bg) 76%);
+  background-attachment:fixed;
+  min-height:100%;
+  -webkit-text-size-adjust:100%;
+  overflow-x:hidden;
+  isolation:isolate;
+}
+body::before{
+  content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.25;
+  background-image:radial-gradient(rgba(255,255,255,.28) 1px,transparent 1.5px);
+  background-size:26px 26px;mask-image:linear-gradient(to bottom,black,transparent 75%);
+}
+body::after{
+  content:"";position:fixed;width:440px;height:440px;right:-180px;bottom:-205px;
+  z-index:0;pointer-events:none;border:1px solid rgba(255,255,255,.12);border-radius:50%;
+  box-shadow:0 0 0 48px rgba(255,255,255,.025),0 0 0 96px rgba(255,255,255,.02);
+}
+button{font:inherit;color:inherit;}
+
+/* ============================================================
+   SCREENS
+   ============================================================ */
+.screen{display:none;position:relative;z-index:1;max-width:1020px;margin:0 auto;padding:24px 18px 70px;}
+.screen.active{display:block;animation:fadeUp .35s ease both;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:none;}}
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+.btn{
+  border:none;cursor:pointer;border-radius:999px;
+  padding:15px 30px;font-size:.88rem;font-weight:800;letter-spacing:.075em;text-transform:uppercase;
+  background:linear-gradient(180deg,#5f8fb4,var(--brand-dk));
+  color:#fff;
+  box-shadow:0 6px 0 #011e33, 0 12px 24px rgba(0,0,0,.32),inset 0 1px 0 rgba(255,255,255,.3);
+  transition:transform .12s ease, box-shadow .12s ease, filter .12s ease;
+  -webkit-tap-highlight-color:transparent;
+}
+.btn:hover{filter:brightness(1.1);transform:translateY(-2px);}
+.btn:active{transform:translateY(4px);box-shadow:0 2px 0 #011e33,0 6px 14px rgba(0,0,0,.3);}
+.btn.ghost{
+  background:rgba(255,255,255,.1);color:#fff;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.3),0 8px 18px rgba(0,0,0,.1);
+}
+.btn.ghost:active{transform:translateY(2px);box-shadow:inset 0 0 0 2px rgba(255,255,255,.3);}
+.btn.small{padding:10px 20px;font-size:.94rem;}
+.btn-row{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:26px;}
+:focus-visible{outline:3px solid var(--brand);outline-offset:3px;}
+
+/* ============================================================
+   START SCREEN
+   ============================================================ */
+.hero{position:relative;isolation:isolate;text-align:center;padding:38px 28px 32px;}
+.hero::before{
+  content:"";position:absolute;z-index:-1;inset:10px -16px 0;border-radius:32px;
+  border:1px solid rgba(255,255,255,.13);background:linear-gradient(145deg,rgba(255,255,255,.12),rgba(255,255,255,.035));
+  box-shadow:0 24px 60px rgba(0,0,0,.19),inset 0 1px 0 rgba(255,255,255,.12);transform:rotate(-.3deg);
+}
+.school-logo{
+  display:block;width:min(210px,62vw);height:auto;margin:0 auto 18px;
+  filter:drop-shadow(0 5px 14px rgba(0,0,0,.24));
+}
+.quest-kicker{
+  display:inline-flex;align-items:center;gap:10px;color:var(--sun);font-size:.76rem;font-weight:900;
+  letter-spacing:.16em;text-transform:uppercase;margin-bottom:10px;
+}
+.quest-kicker span{font-size:.9rem;filter:drop-shadow(0 0 8px rgba(255,201,92,.8));}
+.hero .badge{
+  display:inline-block;background:rgba(7,27,53,.36);border:1px solid rgba(255,255,255,.16);
+  padding:7px 16px;border-radius:999px;font-weight:800;
+  letter-spacing:.09em;font-size:.76rem;text-transform:uppercase;
+  color:#dceefe;
+}
+/* Serif display for the title only — a collegiate note against the rounded
+   sans used throughout gameplay. All faces are local; no webfonts to fail. */
+.hero h1{
+  font-family:"EB Garamond",Georgia,serif;
+  font-size:clamp(2.35rem,7vw,3.9rem);margin:4px 0 4px;line-height:1.02;
+  font-weight:700;letter-spacing:-.025em;text-wrap:balance;color:#fff;text-shadow:0 6px 24px rgba(0,0,0,.27);
+}
+.hero h1 strong{display:block;color:var(--sun);font-family:"Open Sans",Arial,sans-serif;font-size:.36em;font-weight:800;letter-spacing:.11em;text-transform:uppercase;margin-top:10px;text-shadow:none;}
+.hero .rule{
+  width:94px;height:5px;border-radius:999px;margin:18px auto 16px;
+  background:linear-gradient(90deg,var(--aqua),var(--sun),var(--brand));box-shadow:0 0 18px rgba(255,201,92,.38);
+}
+.hero p.sub{font-size:1.08rem;color:#d5e5f2;margin:0 auto;max-width:520px;line-height:1.55;}
+.how{
+  background:rgba(5,23,47,.38);border:1px solid rgba(255,255,255,.15);
+  border-radius:20px;padding:21px 24px;margin:30px auto 0;max-width:620px;text-align:left;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.08);
+}
+.how h3{margin:0 0 12px;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--sun);}
+.how ol{margin:0;padding:0;list-style:none;counter-reset:steps;color:#dbe9f5;line-height:1.55;font-size:1rem;display:grid;grid-template-columns:1fr;gap:12px;}
+.how li{counter-increment:steps;position:relative;padding-left:37px;min-height:25px;}
+.how li::before{content:counter(steps);position:absolute;left:0;top:0;display:grid;place-items:center;width:25px;height:25px;border-radius:50%;font-size:.76rem;font-weight:900;background:rgba(70,201,196,.18);color:var(--aqua);box-shadow:inset 0 0 0 1px rgba(70,201,196,.42);}
+.best{margin-top:20px;color:#b8d0e3;font-size:.94rem;}
+
+/* ============================================================
+   GAME HEADER
+   ============================================================ */
+.hud{
+  display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+  background:rgba(6,26,51,.54);border:1px solid rgba(255,255,255,.16);
+  border-radius:18px;padding:12px 16px;margin-bottom:14px;box-shadow:0 12px 28px rgba(0,0,0,.16),inset 0 1px 0 rgba(255,255,255,.1);
+}
+.hud .pill{font-weight:800;font-size:.95rem;white-space:nowrap;}
+.hud .pill span{color:var(--sun);}
+.hud .spacer{flex:1;}
+.iconbtn{
+  border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.1);color:#fff;cursor:pointer;
+  width:42px;height:42px;border-radius:12px;font-size:1.15rem;line-height:1;
+  display:grid;place-items:center;transition:background .15s ease,transform .1s ease;
+}
+.iconbtn:hover{background:rgba(255,255,255,.22);}
+.iconbtn:active{transform:scale(.93);}
+.bar{height:13px;border-radius:999px;background:rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.12);overflow:hidden;margin-bottom:10px;box-shadow:inset 0 2px 4px rgba(0,0,0,.2);}
+.bar > i{
+  display:block;height:100%;width:0%;border-radius:999px;
+  background:linear-gradient(90deg,var(--aqua),var(--sun),var(--brand));box-shadow:0 0 14px rgba(255,201,92,.45);
+  transition:width .45s cubic-bezier(.34,1.4,.5,1);
+}
+.roundlabel{
+  text-align:center;color:#bed6e9;font-size:.78rem;font-weight:900;
+  letter-spacing:.06em;text-transform:uppercase;margin:0 0 16px;
+}
+
+/* ============================================================
+   WORD TRAY + CHIPS
+   ============================================================ */
+.tray{
+  position:sticky;top:0;z-index:60;
+  background:linear-gradient(180deg,rgba(7,27,53,.97) 72%,rgba(7,27,53,0));
+  padding:10px 0 20px;margin:0 -4px 4px;
+}
+.tray-inner{
+  display:flex;flex-wrap:wrap;gap:11px;justify-content:center;
+  min-height:66px;padding:3px 4px;
+}
+.chip{
+  --tilt:0deg;
+  position:relative;
+  border:none;cursor:grab;
+  padding:14px 20px;border-radius:14px;
+  font-size:clamp(.94rem,2.5vw,1.08rem);font-weight:800;
+  /* Brand red: must read against the navy tray AND against the white
+     definition cards it floats over while being dragged. */
+  background:linear-gradient(180deg,#5f8fb4,#4b7aa0);
+  color:#fff;
+  box-shadow:0 5px 0 #012b49,0 10px 22px rgba(0,0,0,.34),inset 0 1px 0 rgba(255,255,255,.35);
+  touch-action:none;user-select:none;-webkit-user-select:none;
+  -webkit-user-drag:none;-webkit-tap-highlight-color:transparent;
+  transition:transform .18s cubic-bezier(.34,1.5,.5,1),box-shadow .18s ease,opacity .2s ease;
+}
+.chip:hover{transform:translateY(-3px) rotate(-1deg);}
+.chip.chip-aqua{background:linear-gradient(180deg,#57a05b,#348338);box-shadow:0 5px 0 #246c28,0 10px 22px rgba(0,0,0,.34),inset 0 1px 0 rgba(255,255,255,.38);}
+.chip.chip-violet{background:linear-gradient(180deg,#a95c87,#893b67);box-shadow:0 5px 0 #642746,0 10px 22px rgba(0,0,0,.34),inset 0 1px 0 rgba(255,255,255,.35);}
+.chip.chip-sun{background:linear-gradient(180deg,#d0b342,#c1a01f);color:#172638;box-shadow:0 5px 0 #927814,0 10px 22px rgba(0,0,0,.3),inset 0 1px 0 rgba(255,255,255,.44);}
+.chip.chip-sky{background:linear-gradient(180deg,#ef994d,#e87722);box-shadow:0 5px 0 #ad5517,0 10px 22px rgba(0,0,0,.34),inset 0 1px 0 rgba(255,255,255,.38);}
+.chip.selected{
+  box-shadow:0 5px 0 #012b49,0 0 0 4px #fff,0 0 30px 6px var(--ring);
+  transform:translateY(-4px) scale(1.05);
+}
+.chip.dragging{
+  cursor:grabbing;z-index:999;
+  transition:none;
+  box-shadow:0 20px 34px rgba(0,0,0,.5),0 5px 0 #012b49,0 0 0 3px rgba(255,255,255,.85);
+}
+.chip.snapping{transition:transform .22s cubic-bezier(.34,1.5,.5,1);}
+.chip.locked{
+  cursor:default;
+  background:linear-gradient(180deg,#c6f2d8,#66c98d);
+  color:#0b3d23;box-shadow:0 4px 0 var(--good-dk);
+}
+.chip.locked,.slot .drop .chip.locked{background:linear-gradient(180deg,#c6f2d8,#66c98d);color:#0b3d23;box-shadow:0 4px 0 var(--good-dk);}
+.chip.locked:hover{transform:none;}
+.chip.pop{animation:pop .42s cubic-bezier(.34,1.6,.5,1);}
+@keyframes pop{0%{transform:scale(.55) rotate(-8deg);}60%{transform:scale(1.16) rotate(3deg);}100%{transform:scale(1);}}
+
+/* ============================================================
+   DEFINITION SLOTS
+   ============================================================ */
+.slots{display:flex;flex-direction:column;gap:13px;}
+.slot{
+  position:relative;
+  display:flex;align-items:center;gap:15px;
+  background:var(--card);color:var(--ink);
+  border-radius:var(--radius);padding:16px 18px;
+  box-shadow:var(--shadow);
+  border-left:7px solid #d3dfe9;
+  transition:transform .16s ease,border-color .22s ease,box-shadow .16s ease;
+  cursor:pointer;
+}
+.slot::after{content:"";position:absolute;right:18px;top:15px;width:18px;height:18px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fff 0 13%,transparent 16%),linear-gradient(135deg,rgba(70,201,196,.9),rgba(131,116,239,.9));opacity:.26;}
+.slot.hover{transform:scale(1.022);border-left-color:var(--brand);box-shadow:0 0 0 4px var(--ring),var(--shadow);}
+.slot.solved{border-left-color:var(--good);cursor:default;background:#f4fbf7;}
+.slot.wrong{animation:shake .42s;border-left-color:var(--bad);}
+@keyframes shake{
+  0%,100%{transform:translateX(0);}
+  15%{transform:translateX(-10px);}30%{transform:translateX(9px);}
+  45%{transform:translateX(-7px);}60%{transform:translateX(6px);}80%{transform:translateX(-3px);}
+}
+.drop{
+  flex:0 0 clamp(120px,26vw,175px);min-height:56px;
+  border:3px dashed #b9cbdb;border-radius:13px;
+  display:grid;place-items:center;padding:5px;
+  color:#8fa6bb;font-weight:800;font-size:.85rem;text-align:center;
+  transition:border-color .2s ease,background .2s ease;
+}
+.slot.hover .drop{border-color:var(--brand);background:#edf4f8;}
+.slot.solved .drop{border-style:solid;border-color:var(--good);background:#e9f8ef;}
+.slot .deftext{flex:1;font-size:clamp(.96rem,2.4vw,1.06rem);line-height:1.48;font-weight:600;}
+.slot .drop .chip{width:100%;padding:11px 12px;font-size:clamp(.82rem,2.2vw,.96rem);}
+
+.streak{
+  text-align:center;font-weight:900;color:var(--sun);
+  height:26px;margin:6px 0 2px;font-size:1.02rem;
+  opacity:0;transition:opacity .25s ease;
+}
+.streak.show{opacity:1;animation:pop .4s;}
+
+/* ============================================================
+   RESULTS
+   ============================================================ */
+.result-card{
+  position:relative;overflow:hidden;background:linear-gradient(145deg,rgba(255,255,255,.14),rgba(255,255,255,.055));border:1px solid rgba(255,255,255,.2);
+  border-radius:28px;padding:38px 26px;text-align:center;box-shadow:0 24px 70px rgba(0,0,0,.22),inset 0 1px 0 rgba(255,255,255,.14);
+}
+.result-card::before{content:"✦";position:absolute;left:-8px;top:-30px;color:rgba(255,201,92,.15);font-size:10rem;line-height:1;transform:rotate(-18deg);}
+.stars{font-size:3.1rem;letter-spacing:10px;margin:6px 0 4px;}
+.stars i{display:inline-block;font-style:normal;opacity:.22;animation:starIn .5s cubic-bezier(.34,1.6,.5,1) both;}
+.stars i.on{opacity:1;color:var(--sun);filter:drop-shadow(0 0 16px rgba(255,201,92,.8));}
+@keyframes starIn{from{transform:scale(0) rotate(-140deg);}to{transform:none;}}
+.result-card h2{font-size:clamp(1.7rem,5.5vw,2.4rem);margin:8px 0 6px;}
+.result-card .msg{color:#cfe0ed;font-size:1.08rem;margin:0 0 22px;}
+.stats{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:8px;}
+.stat{background:rgba(4,22,44,.32);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:14px 22px;min-width:110px;}
+.stat b{display:block;font-size:1.85rem;color:var(--sun);line-height:1.1;}
+.stat span{font-size:.82rem;color:#9fb8cd;text-transform:uppercase;letter-spacing:.06em;font-weight:700;}
+.practice{
+  margin-top:26px;text-align:left;background:rgba(4,22,44,.32);border:1px solid rgba(255,255,255,.1);
+  border-radius:18px;padding:18px 20px;
+}
+.practice h3{margin:0 0 12px;color:var(--sun);font-size:.82rem;text-transform:uppercase;letter-spacing:.1em;}
+.practice li{margin-bottom:11px;line-height:1.5;color:#d8e5ef;}
+.practice li b{color:var(--brand);}
+
+/* ============================================================
+   STUDY MODE
+   ============================================================ */
+.study-head{display:flex;align-items:center;gap:12px;margin:8px 0 6px;}
+.study-head h2{margin:0;font-size:1.6rem;flex:1;}
+.study-hint{color:#c4d7e6;margin:0 0 18px;font-size:.95rem;}
+.study-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(268px,1fr));gap:14px;}
+.flip{
+  background:none;border:none;padding:0;perspective:1000px;cursor:pointer;
+  height:184px;font:inherit;text-align:left;
+}
+.flip-in{
+  position:relative;width:100%;height:100%;
+  transition:transform .55s cubic-bezier(.4,.9,.3,1);transform-style:preserve-3d;
+}
+.flip.flipped .flip-in{transform:rotateY(180deg);}
+.face{
+  position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;
+  border-radius:var(--radius);padding:18px;display:flex;flex-direction:column;
+  justify-content:center;box-shadow:var(--shadow);
+}
+.face.front{
+  background:linear-gradient(145deg,#5f8fb4,#012b49 62%,#0a395f);color:#fff;
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.17),var(--shadow);
+  align-items:center;text-align:center;font-weight:900;font-size:1.25rem;
+}
+.face.front small{display:block;margin-top:12px;font-size:.72rem;font-weight:800;color:var(--sun);letter-spacing:.09em;text-transform:uppercase;}
+.face.back{background:var(--card);color:var(--ink);transform:rotateY(180deg);overflow:auto;}
+.face.back .d{font-weight:650;line-height:1.45;font-size:.98rem;}
+.face.back .e{margin-top:10px;font-size:.86rem;color:var(--ink-soft);font-style:italic;line-height:1.4;}
+
+/* ============================================================
+   CONFETTI + A11Y
+   ============================================================ */
+#confetti{position:fixed;inset:0;pointer-events:none;z-index:9999;overflow:hidden;}
+.cf{position:absolute;width:11px;height:15px;border-radius:2px;animation:fall linear forwards;}
+@keyframes fall{to{transform:translateY(108vh) rotate(760deg);opacity:0;}}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
+
+@media (max-width:600px){
+  .slot{flex-direction:column;align-items:stretch;gap:11px;}
+  .drop{flex:none;width:100%;}
+  .hero{padding:28px 12px 24px;}
+  .hero::before{inset:4px -6px 0;}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation-duration:.01ms !important;transition-duration:.05ms !important;}
+}
+</style>
+</head>
+<body>
+
+<!-- ===================== START ===================== -->
+<section id="start" class="screen active">
+  <div class="hero">
+    <img class="school-logo" src="assets/fcs-logo.svg" alt="Fellowship Christian School">
+    <div class="quest-kicker"><span>✦</span> Word Quest <span>✦</span></div>
+    <div class="badge">Vocabulary Practice</div>
+    <h1>Fellowship 5th Grade<strong>Vocabulary Quest</strong></h1>
+    <div class="rule"></div>
+    <p class="sub">Drag each word onto the definition that matches it. 15 words, 3 quick rounds.</p>
+    <div class="how">
+      <h3>How to play</h3>
+      <ol>
+        <li><b>Drag</b> a word tile down onto its definition.</li>
+        <li>Or <b>tap the word</b>, then <b>tap the definition</b>.</li>
+        <li>Green means you got it. Wrong ones just bounce back — try again, no penalty!</li>
+      </ol>
+    </div>
+    <div class="btn-row">
+      <button class="btn" id="btnPlay">Start Game</button>
+      <button class="btn ghost" id="btnStudyFirst">Study the Words First</button>
+    </div>
+    <p class="best" id="bestLine"></p>
+  </div>
+</section>
+
+<!-- ===================== GAME ===================== -->
+<section id="game" class="screen">
+  <div class="hud">
+    <div class="pill">Score: <span id="hudScore">0</span></div>
+    <div class="pill">Matched: <span id="hudMatched">0</span>/15</div>
+    <div class="spacer"></div>
+    <button class="iconbtn" id="btnSound" title="Sound on/off" aria-label="Toggle sound">🔊</button>
+    <button class="iconbtn" id="btnQuit" title="Back to menu" aria-label="Back to menu">✕</button>
+  </div>
+  <div class="bar"><i id="progFill"></i></div>
+  <p class="roundlabel" id="roundLabel">Round 1 of 3</p>
+
+  <div class="tray"><div class="tray-inner" id="tray"></div></div>
+  <div class="streak" id="streak"></div>
+  <div class="slots" id="slots"></div>
+  <p class="sr" id="live" aria-live="polite"></p>
+</section>
+
+<!-- ===================== RESULTS ===================== -->
+<section id="results" class="screen">
+  <div class="result-card">
+    <div class="stars" id="stars"><i>★</i><i>★</i><i>★</i></div>
+    <h2 id="resultTitle">Great job!</h2>
+    <p class="msg" id="resultMsg"></p>
+    <div class="stats">
+      <div class="stat"><b id="stScore">0</b><span>Score</span></div>
+      <div class="stat"><b id="stFirst">0</b><span>First Try</span></div>
+      <div class="stat"><b id="stAcc">0%</b><span>Accuracy</span></div>
+    </div>
+    <div id="practiceWrap"></div>
+    <div class="btn-row">
+      <button class="btn" id="btnAgain">Play Again</button>
+      <button class="btn ghost" id="btnStudyAfter">Study the Words</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== STUDY ===================== -->
+<section id="study" class="screen">
+  <div class="study-head">
+    <h2>Study Cards</h2>
+    <button class="btn ghost small" id="btnBackFromStudy">Back</button>
+  </div>
+  <p class="study-hint">Click a card to flip it over and see what the word means.</p>
+  <div class="study-grid" id="studyGrid"></div>
+</section>
+
+<div id="confetti" aria-hidden="true"></div>
+
+<script>
+/* ==================================================================
+   ▼▼▼  THE WORD LIST — EDIT THIS BLOCK FOR NEXT WEEK'S WORDS  ▼▼▼
+   Each entry: word / def (the definition she drags to) / example.
+   Keep 5 words per group. Add or remove whole groups freely —
+   the game builds one round per group automatically.
+   ================================================================== */
+const GROUPS = [
+  {
+    title: "Systems & Documents",
+    words: [
+      { word:"Democracy",
+        def:"A form of government where people have the power to make political decisions directly.",
+        example:"In a direct democracy, the people vote on the decisions themselves." },
+      { word:"Republic",
+        def:"A form of government where citizens choose leaders, called representatives, by voting.",
+        example:"We elect members of Congress to represent us — that makes the U.S. a republic." },
+      { word:"Constitutional Republic",
+        def:"A republic where all people are bound to the laws established by a constitution.",
+        example:"The U.S. is a constitutional republic: we elect leaders, and everyone must follow the Constitution." },
+      { word:"Constitution",
+        def:"A written plan for government.",
+        example:"The U.S. Constitution was written in 1787 and is still the plan for our government today." },
+      { word:"Amendments",
+        def:"Changes made to an official state or national document.",
+        example:"The first 10 amendments to the Constitution are called the Bill of Rights." }
+    ]
+  },
+  {
+    title: "Levels of Government",
+    words: [
+      { word:"Federal Government",
+        def:"National government.",
+        example:"The federal government prints money and runs the military for the whole nation." },
+      { word:"State Government",
+        def:"Controls laws in each state.",
+        example:"Your state government decides things like the speed limit on state highways." },
+      { word:"Local Government",
+        def:"Controls laws in cities, towns, and counties.",
+        example:"The mayor and city council are part of your local government." },
+      { word:"Citizen",
+        def:"An official member of a city, a state, or a nation.",
+        example:"A citizen has rights, like voting, and responsibilities, like following the law." },
+      { word:"Rule of Law",
+        def:"Clear rules and laws that everyone must follow, and no one is above the law.",
+        example:"Because of the rule of law, even a president has to obey the law." }
+    ]
+  },
+  {
+    title: "Big Ideas of Government",
+    words: [
+      { word:"Equality",
+        def:"All people are treated the same, regardless of who they are.",
+        example:"Equality means the law protects every person the same way." },
+      { word:"Justice",
+        def:"Behaving in a way that is fair and equal for everyone.",
+        example:"A judge's job is to bring justice to the courtroom." },
+      { word:"Checks and Balances",
+        def:"A system that lets each branch limit the power of the other two.",
+        example:"The president can veto a law, but Congress can override the veto — that's checks and balances." },
+      { word:"Unconstitutional",
+        def:"Laws that do not follow rules laid out by the Constitution; if a law is found to be unconstitutional, the law is no longer valid.",
+        example:"The Supreme Court can rule a law unconstitutional, and then it no longer counts." },
+      { word:"Voting",
+        def:"A formal process in which a group of people makes a choice.",
+        example:"Voting is how citizens make their choice in an election." }
+    ]
+  }
+];
+/* ==================================================================
+   ▲▲▲  END OF EDITABLE WORD LIST  ▲▲▲
+   ================================================================== */
+
+const ALL = GROUPS.flatMap((g,gi) => g.words.map((w,wi) => ({...w, id:gi+"-"+wi})));
+const TOTAL = ALL.length;
+const BEST_KEY = "vocabuilder_best_v1";
+
+/* ------------------------ state ------------------------ */
+const S = {
+  round: 0, matched: 0, totalMatched: 0,
+  score: 0, streak: 0, bestStreak: 0,
+  missed: new Set(), selected: null, muted: false
+};
+
+const $ = id => document.getElementById(id);
+const shuffle = a => { a=a.slice(); for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]];} return a; };
+const show = id => document.querySelectorAll(".screen").forEach(s => s.classList.toggle("active", s.id===id));
+const say  = t => { $("live").textContent = t; };
+
+/* ------------------------ sound ------------------------ */
+let ac = null;
+function tone(freq, at, dur, type="triangle", vol=.16){
+  if(S.muted) return;
+  try{
+    ac = ac || new (window.AudioContext||window.webkitAudioContext)();
+    if(ac.state === "suspended") ac.resume();
+    const o = ac.createOscillator(), g = ac.createGain(), t = ac.currentTime + at;
+    o.type = type; o.frequency.setValueAtTime(freq, t);
+    g.gain.setValueAtTime(0, t);
+    g.gain.linearRampToValueAtTime(vol, t + .015);
+    g.gain.exponentialRampToValueAtTime(.0001, t + dur);
+    o.connect(g); g.connect(ac.destination);
+    o.start(t); o.stop(t + dur + .04);
+  }catch(e){}
+}
+const sndGood  = () => { tone(660,0,.13); tone(990,.09,.20); };
+const sndBad   = () => { tone(200,0,.16,"sine",.13); };
+const sndRound = () => [523,659,784,1046].forEach((f,i) => tone(f, i*.1, .3));
+const sndWin   = () => [523,659,784,1046,1318].forEach((f,i) => tone(f, i*.12, .42));
+
+/* ------------------------ confetti ------------------------ */
+function confetti(n=90){
+  const box = $("confetti");
+  const colors = ["#d34147","#ffffff","#5f8fb4","#2e9e5b","#e8797d","#a8c6de"];
+  for(let i=0;i<n;i++){
+    const p = document.createElement("div");
+    p.className = "cf";
+    p.style.left = Math.random()*100 + "vw";
+    p.style.top = (-12 - Math.random()*22) + "vh";
+    p.style.background = colors[Math.random()*colors.length|0];
+    p.style.animationDuration = (2.1 + Math.random()*1.7) + "s";
+    p.style.animationDelay = (Math.random()*.45) + "s";
+    if(Math.random() > .6) p.style.borderRadius = "50%";
+    box.appendChild(p);
+    setTimeout(() => p.remove(), 4600);
+  }
+}
+
+/* ------------------------ build a round ------------------------ */
+function buildRound(){
+  const words = GROUPS[S.round].words.map((w,wi) => ({...w, id:S.round+"-"+wi}));
+  S.matched = 0;
+  S.selected = null;
+
+  $("roundLabel").textContent = `Round ${S.round+1} of ${GROUPS.length} · ${GROUPS[S.round].title}`;
+
+  const tray = $("tray"); tray.innerHTML = "";
+  shuffle(words).forEach((w, index) => {
+    const c = document.createElement("button");
+    const colorways = ["", "chip-aqua", "chip-violet", "chip-sun", "chip-sky"];
+    c.className = "chip " + colorways[index % colorways.length];
+    c.type = "button";
+    c.dataset.id = w.id;
+    c.textContent = w.word;
+    c.setAttribute("aria-label", "Word: " + w.word);
+    attachDrag(c);
+    tray.appendChild(c);
+  });
+
+  const slots = $("slots"); slots.innerHTML = "";
+  shuffle(words).forEach(w => {
+    const s = document.createElement("div");
+    s.className = "slot";
+    s.dataset.id = w.id;
+    s.tabIndex = 0;
+    s.setAttribute("role", "button");
+    s.setAttribute("aria-label", "Definition: " + w.def);
+    s.innerHTML = `<div class="drop">drop word here</div><div class="deftext"></div>`;
+    s.querySelector(".deftext").textContent = w.def;
+    s.addEventListener("click", () => { if(S.selected) tryMatch(S.selected, s); });
+    s.addEventListener("keydown", e => {
+      if((e.key === "Enter" || e.key === " ") && S.selected){ e.preventDefault(); tryMatch(S.selected, s); }
+    });
+    slots.appendChild(s);
+  });
+
+  updateHud();
+  say(`Round ${S.round+1}. ${GROUPS[S.round].title}. Match five words to five definitions.`);
+}
+
+/* ------------------------ drag & tap ------------------------
+
+   Move/up are bound to the WINDOW, not to the chip. A chip-bound
+   listener can stop firing mid-drag (pointer capture is unreliable
+   in WebKit), which strands the chip in its dragging state and makes
+   it unmovable. The window always sees the release, so a drag can
+   never fail to end.
+   ---------------------------------------------------------------- */
+const drag = { chip:null, id:null, x:0, y:0, moved:false, hover:null };
+
+function attachDrag(chip){
+  // WebKit will happily start its OWN native element-drag on press-and-move,
+  // which swallows the pointer stream so no pointerup ever arrives and the
+  // chip is stranded. Refuse it outright.
+  chip.draggable = false;
+  chip.addEventListener("dragstart", e => e.preventDefault());
+
+  chip.addEventListener("pointerdown", e => {
+    if(chip.classList.contains("locked") || e.button > 0) return;
+    if(drag.chip) resetDrag();   // heal a stale drag rather than blocking forever
+    drag.chip = chip; drag.id = e.pointerId;
+    drag.x = e.clientX; drag.y = e.clientY; drag.moved = false;
+    window.addEventListener("pointermove", onDragMove);
+    window.addEventListener("pointerup", onDragEnd);
+    window.addEventListener("pointercancel", onDragEnd);
+  });
+
+  chip.addEventListener("keydown", e => {
+    if(e.key === "Enter" || e.key === " "){
+      e.preventDefault();
+      select(S.selected === chip ? null : chip);
+    }
+  });
+}
+
+function onDragMove(e){
+  if(!drag.chip || e.pointerId !== drag.id) return;
+  const dx = e.clientX - drag.x, dy = e.clientY - drag.y;
+  if(!drag.moved){
+    if(Math.hypot(dx,dy) <= 6) return;   // still a tap, not a drag
+    drag.moved = true;
+    drag.chip.classList.add("dragging");
+    select(null);
+  }
+  e.preventDefault();
+  drag.chip.style.transform =
+    `translate(${dx}px,${dy}px) scale(1.07) rotate(${Math.max(-7,Math.min(7,dx*.05))}deg)`;
+  setHover(slotAt(e.clientX, e.clientY));
+}
+
+function onDragEnd(e){
+  if(!drag.chip || (e && e.pointerId !== drag.id)) return;
+  const chip = drag.chip, moved = drag.moved;
+  const target = (moved && e && e.type === "pointerup")
+    ? slotAt(e.clientX, e.clientY) : null;
+  resetDrag();
+  if(moved){ if(target) tryMatch(chip, target); }
+  else     { select(S.selected === chip ? null : chip); }
+}
+
+// Always safe to call: puts any in-flight chip back down and clears stray state.
+function resetDrag(){
+  window.removeEventListener("pointermove", onDragMove);
+  window.removeEventListener("pointerup", onDragEnd);
+  window.removeEventListener("pointercancel", onDragEnd);
+  setHover(null);
+  document.querySelectorAll(".chip.dragging").forEach(c => {
+    c.classList.remove("dragging");
+    c.classList.add("snapping");
+    c.style.transform = "";
+    setTimeout(() => c.classList.remove("snapping"), 240);
+  });
+  document.querySelectorAll(".slot.hover").forEach(s => s.classList.remove("hover"));
+  drag.chip = null; drag.id = null; drag.moved = false; drag.hover = null;
+}
+
+// Last-resort recovery: if the release happened somewhere we never heard about
+// (window lost focus, pointer left the browser), don't leave a chip stranded.
+window.addEventListener("blur", () => { if(drag.chip) resetDrag(); });
+
+/* Hit-test slots by geometry rather than elementFromPoint, so the result
+   never depends on what is painted on top of the cursor. */
+function slotAt(x,y){
+  const slots = document.querySelectorAll("#slots .slot:not(.solved)");
+  for(const s of slots){
+    const r = s.getBoundingClientRect();
+    if(x >= r.left && x <= r.right && y >= r.top && y <= r.bottom) return s;
+  }
+  return null;
+}
+function setHover(slot){
+  if(drag.hover === slot) return;
+  if(drag.hover) drag.hover.classList.remove("hover");
+  drag.hover = slot;
+  if(slot) slot.classList.add("hover");
+}
+function select(chip){
+  document.querySelectorAll(".chip.selected").forEach(c => c.classList.remove("selected"));
+  S.selected = chip || null;
+  if(chip){
+    chip.classList.add("selected");
+    say(chip.textContent + " picked up. Now choose a definition.");
+  }
+}
+
+/* ------------------------ matching ------------------------ */
+function tryMatch(chip, slot){
+  if(!chip || !slot || slot.classList.contains("solved") || chip.classList.contains("locked")) return;
+
+  if(slot.dataset.id === chip.dataset.id){
+    // ---- correct ----
+    select(null);
+    slot.classList.add("solved");
+    slot.classList.remove("hover");
+    slot.setAttribute("aria-label", "Solved: " + chip.textContent);
+    const drop = slot.querySelector(".drop");
+    drop.textContent = "";
+    chip.classList.add("locked","pop");
+    chip.classList.remove("selected");
+    chip.tabIndex = -1;
+    chip.style.transform = "";
+    drop.appendChild(chip);
+
+    const firstTry = !S.missed.has(chip.dataset.id);
+    S.score += firstTry ? 10 : 5;
+    S.streak = firstTry ? S.streak + 1 : 0;
+    S.bestStreak = Math.max(S.bestStreak, S.streak);
+    S.matched++; S.totalMatched++;
+
+    sndGood();
+    flashStreak();
+    updateHud();
+    say("Correct! " + chip.textContent + ".");
+
+    if(S.matched === GROUPS[S.round].words.length){
+      setTimeout(roundDone, 620);
+    }
+  }else{
+    // ---- wrong ----
+    S.missed.add(chip.dataset.id);
+    S.streak = 0;
+    slot.classList.add("wrong");
+    setTimeout(() => slot.classList.remove("wrong"), 440);
+    sndBad();
+    flashStreak();
+    say("Not quite — try another definition.");
+  }
+}
+
+function flashStreak(){
+  const el = $("streak");
+  if(S.streak >= 2){
+    el.textContent = `🔥 ${S.streak} in a row!`;
+    el.classList.add("show");
+  }else{
+    el.classList.remove("show");
+  }
+}
+
+function updateHud(){
+  $("hudScore").textContent = S.score;
+  $("hudMatched").textContent = S.totalMatched;
+  $("progFill").style.width = (S.totalMatched / TOTAL * 100) + "%";
+}
+
+function roundDone(){
+  S.round++;
+  if(S.round < GROUPS.length){
+    sndRound();
+    confetti(40);
+    $("streak").classList.remove("show");
+    buildRound();
+    window.scrollTo({ top:0, behavior:"smooth" });
+  }else{
+    finishGame();
+  }
+}
+
+/* ------------------------ results ------------------------ */
+function finishGame(){
+  const firstTry = TOTAL - S.missed.size;
+  const acc = Math.round(firstTry / TOTAL * 100);
+  const starCount = firstTry >= 13 ? 3 : firstTry >= 10 ? 2 : 1;
+
+  $("stScore").textContent = S.score;
+  $("stFirst").textContent = firstTry + "/" + TOTAL;
+  $("stAcc").textContent = acc + "%";
+
+  $("stars").innerHTML = "";
+  for(let i=0;i<3;i++){
+    const s = document.createElement("i");
+    s.textContent = "★";
+    if(i < starCount) s.classList.add("on");
+    s.style.animationDelay = (i * .18) + "s";
+    $("stars").appendChild(s);
+  }
+
+  const titles = ["Nice work!","Great job!","Vocabulary Champion!"];
+  const msgs = [
+    "You finished all 15 words. Flip through the study cards and give it another go!",
+    "You got most of these on the first try. One more round and you'll have them all!",
+    "You matched nearly every word on the very first try. You know these cold!"
+  ];
+  $("resultTitle").textContent = titles[starCount-1];
+  $("resultMsg").textContent = msgs[starCount-1];
+
+  const wrap = $("practiceWrap");
+  if(S.missed.size){
+    const items = ALL.filter(w => S.missed.has(w.id))
+      .map(w => `<li><b>${w.word}</b> — ${w.def}</li>`).join("");
+    wrap.innerHTML = `<div class="practice"><h3>Words to practice</h3><ul>${items}</ul></div>`;
+  }else{
+    wrap.innerHTML = `<div class="practice"><h3>Perfect run</h3>
+      <li style="list-style:none">You didn't miss a single word. 🎉</li></div>`;
+  }
+
+  const best = +(localStorage.getItem(BEST_KEY) || 0);
+  if(S.score > best) localStorage.setItem(BEST_KEY, S.score);
+
+  show("results");
+  window.scrollTo({ top:0, behavior:"smooth" });
+  sndWin();
+  confetti(starCount >= 3 ? 160 : 100);
+}
+
+/* ------------------------ study cards ------------------------ */
+function buildStudy(){
+  const grid = $("studyGrid");
+  grid.innerHTML = "";
+  ALL.forEach(w => {
+    const b = document.createElement("button");
+    b.className = "flip";
+    b.type = "button";
+    b.innerHTML = `<div class="flip-in">
+        <div class="face front"><span></span><small>tap to flip</small></div>
+        <div class="face back"><div class="d"></div><div class="e"></div></div>
+      </div>`;
+    b.querySelector(".front span").textContent = w.word;
+    b.querySelector(".d").textContent = w.def;
+    b.querySelector(".e").textContent = w.example;
+    b.addEventListener("click", () => b.classList.toggle("flipped"));
+    grid.appendChild(b);
+  });
+}
+
+/* ------------------------ flow ------------------------ */
+function startGame(){
+  S.round = 0; S.matched = 0; S.totalMatched = 0;
+  S.score = 0; S.streak = 0; S.bestStreak = 0;
+  S.missed = new Set(); S.selected = null;
+  $("streak").classList.remove("show");
+  buildRound();
+  show("game");
+  window.scrollTo({ top:0 });
+  tone(880,0,.12);
+}
+
+function showBest(){
+  const best = +(localStorage.getItem(BEST_KEY) || 0);
+  $("bestLine").textContent = best ? `🏆 Best score so far: ${best}` : "";
+}
+
+$("btnPlay").addEventListener("click", startGame);
+$("btnAgain").addEventListener("click", startGame);
+$("btnStudyFirst").addEventListener("click", () => { buildStudy(); show("study"); });
+$("btnStudyAfter").addEventListener("click", () => { buildStudy(); show("study"); });
+$("btnBackFromStudy").addEventListener("click", () => { showBest(); show("start"); });
+$("btnQuit").addEventListener("click", () => { showBest(); show("start"); });
+$("btnSound").addEventListener("click", () => {
+  S.muted = !S.muted;
+  $("btnSound").textContent = S.muted ? "🔇" : "🔊";
+  if(!S.muted) tone(880,0,.1);
+});
+
+// Tapping empty space puts a picked-up word back down.
+document.addEventListener("click", e => {
+  if(S.selected && !e.target.closest(".chip") && !e.target.closest(".slot")) select(null);
+});
+
+showBest();
+</script>
+</body>
+</html>

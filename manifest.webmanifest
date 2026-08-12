@@ -1,0 +1,30 @@
+{
+  "name": "VocaBuilder · Fellowship",
+  "short_name": "VocaBuilder",
+  "description": "Fellowship Christian School vocabulary practice.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#012b49",
+  "theme_color": "#012b49",
+  "icons": [
+    {
+      "src": "assets/vocabuilder-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/vocabuilder-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/vocabuilder-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
